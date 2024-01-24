@@ -3,7 +3,7 @@ all: sfd-dist ttf woff eot ttf-dist web-dist
 version:= 2.91.1
 font_name:= "lohit-tamil"
 font_filename:= "Lohit-Tamil"
-conf_filename:= "66-lohit-tamil.conf"
+conf_filename:= "66-lohit-tamil-fonts.conf"
 source_dir:= "src"
 script_dir:= "scripts"
 sfntly:= "java -jar /usr/share/java/sfnttool.jar"
