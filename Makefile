@@ -1,6 +1,6 @@
 all: sfd-dist ttf woff eot ttf-dist web-dist  
 
-version:= 2.91.1
+version:= 2.91.3
 font_name:= "lohit-tamil"
 font_filename:= "Lohit-Tamil"
 conf_filename:= "66-lohit-tamil-fonts.conf"
@@ -10,11 +10,11 @@ sfntly:= "java -jar /usr/share/java/sfnttool.jar"
 
 test: test-ttf
 	@echo "----------Testing actual-output with expected-output----------"
-	python $(script_dir)/auto_test.py std-test-out.txt Lohit-Tamil.ttf
+	python3 $(script_dir)/auto_test.py std-test-out.txt Lohit-Tamil.ttf
 
 ttf: ttf-bin
 	@echo "----------Generating ttf from sfd file----------"
-	python $(script_dir)/apply_featurefile.py $(source_dir)/Lohit-Tamil.sfd $(source_dir)/Lohit-Tamil.fea
+	python3 $(script_dir)/apply_featurefile.py $(source_dir)/Lohit-Tamil.sfd $(source_dir)/Lohit-Tamil.fea
 	./generate.pe $(source_dir)/*.sfd
 	@echo "----------Finished generating ttf file----------"
 	@echo " "
